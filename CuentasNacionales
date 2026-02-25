@@ -1,0 +1,97 @@
+#*************************************************************************************************#
+
+# ¿Qué son las cuentas nacionales?
+# Permiten medir la actividad de una economía a lo largo de un periodo (anual, mensual, etc.), registrando las transacciones
+# realizadas entre diferentes agentes que forman parte de dicha economía.
+
+# 1) Calcular el Producto Bruto Interno (PBI) teniendo en cuenta la siguiente información:
+# * Depreciación = 160 millones
+# * SNFE = -650 millones
+# * PNN = 6 540 millones
+
+D = float(input("Ingrese el valor de Depreciación (millones):"))
+SNFE = float(input("Ingrese el valor de Saldo Neto de Factores Externos (millones):"))
+PNN = float(input("Ingrese el valor de Producto Nacional Neto (millones):"))
+
+# Primera etapa calcular el PNB a partir del PNN 
+# PNN = PNB - Depreciacion 
+# PNB = PNN + Depreciacion
+
+PNB = PNN + D
+print(str(PNB) + " " + "millones" + " " + "(Valor del Producto Nacional Bruto)")
+
+# Segunda etapa calcular el PBI a partir del PNB
+# PNB = PBI +/- SNFE
+# PBI = PNB + SNFE
+
+PBI = PNB - SNFE
+print(str(PBI) + " " + "millones" + " " + "(Valor del Producto Bruto Interno)")
+
+#*************************************************************************************************#
+
+# 2) Calcular el Producto Bruto Interno (PBI) teniendo en cuenta la siguiente información:
+# * YN = 5 550 millones
+# * Impuestos Indirectos = 860 millones
+# * Subsidios = 120 millones
+# * Depreciación = 180 millones
+# * SNFE = 80 millones
+
+YN = float(input("Ingrese el valor de Ingreso Nacional (millones):"))
+Ti = float(input("Ingrese el valor de Impuestos Indirectos (millones):"))
+Sb = float(input("Ingrese el valor de Subsidios (millones):"))
+D = float(input("Ingrese el valor de Depreciación (millones):"))
+SNFE = float(input("Ingrese el valor de Saldo Neto de Factores Externos (millones):"))
+
+# Primera etapa calcular el PNN a partir del YN
+# YN = PNN - Ti + Sb 
+# PNN = YN + Ti - Sb
+
+PNN = YN + Ti - Sb
+print(str(PNN)+ " " + "millones" + " " + "(Valor del Producto Nacional Neto)")
+
+# Segunda etapa calcular el PNB a partir del PNN
+# PNN = PNB - D 
+# PNB = PNN + D
+
+PNB = PNN + D
+print(str(PNB)+ " " + "millones" + " " + "(Valor del Producto Nacional Bruto)")
+
+# Tercera etapa calcular el PBI a partir del PNB
+# PNB = PBI +/- SNFE
+# PBI = PNB - SNFE 
+
+PBI = PNB - SNFE
+print(str(PBI)+ " " + "millones" + " " + "(Valor del Producto Bruto Interno)")
+
+#*************************************************************************************************#
+
+# 3) Calcular el Ingreso Nacional (YN) de esta economía:
+# * PBI = 2 800 millones
+# * SNFE = 500 millones
+# * Depreciación = 2 000 millones
+# * Impuestos indirectos = 200 millones
+# * Subsidios = 50 millones
+
+PBI = float(input("Ingrese el valor de Producto Bruto Interno (millones):"))
+SNFE = float(input("Ingrese el valor de Saldo Neto de Factores Externos (millones):"))
+D = float(input("Ingrese el valor de Depreciación (millones):"))
+Ti = float(input("Ingrese el valor de Impuestos Indirectos (millones):"))
+Sb = float(input("Ingrese el valor de Subsidios (millones):"))
+
+# Primera etapa calcular el PNB a partir del PBI y SNFE
+# PNB = PBI +/- SNFE
+
+PNB = PBI + SNFE
+print(str(PNB)+ " " + "millones" + " " + "(Valor del Producto Nacional Bruto)")
+
+# Segunda etapa calcular el PNN a partir del PNB y D
+# PNN = PNB - D 
+
+PNN = PNB - D 
+print(str(PNN)+ " " + "millones" + " " + "(Valor del Producto Nacional Neto)")
+
+# Tercera etapa calcular el YN a partir del PNN, Ti y Sb
+# YN = PNN - Ti + Sb
+
+YN = PNN - Ti + Sb
+print(str(YN)+ " " + "millones" + " " + "(Valor del Ingreso Nacional)")
