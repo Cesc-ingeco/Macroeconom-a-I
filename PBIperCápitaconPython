@@ -1,0 +1,118 @@
+# ¿Como se instala el PBI per cápita?
+# Nos indica la producción o gasto por persona en promedio, por ello 
+# Resulta importante comparar las tasas de crecimiento del PBI y población para analizar desviaciones posibles del PBI per cápita.
+# * Si crecimiento PBI > crecimiento de población = Genera un mayor PBI per cápita, por ende mayor producción promedio por persona. 
+# * Si crecimiento PBI < crecimiento de población = Genera un menor PBI per cápota, por ende menor producción promedio por persona. 
+
+# 1) Calcular el PBI per-cápita y determinar cuál economía se encuentra en una mejor situación de consumo, ingreso, gasto. 
+
+# Datos para Ecuador:
+# * PBI real: 98 810 millones de $
+# * Cantidad de población: 17.64 millones de habitantes
+
+PBI_Ecuador = float(input("Ingrese el valor de PBI real de Ecuador (millones de $):"))
+Cantidad_Poblacion_Ecuador = float(input("Ingrese el valor de cantidad de población de Ecuador (millones de habitantes):"))
+
+PBIpercápita_Ecuador = PBI_Ecuador/Cantidad_Poblacion_Ecuador
+
+# Datos para Brasil:
+# * PBI real: 1 445 000 millones de $
+# * Cantidad de población: 212.60 millones de habitantes
+
+PBI_Brasil = float(input("Ingrese el valor de PBI real de Brasil (millones de $):"))
+Cantidad_Poblacion_Brasil = float(input("Ingrese el valor de cantidad de población de Brasil (millones de habitantes):"))
+
+PBIpercápita_Brasil = PBI_Brasil/Cantidad_Poblacion_Brasil
+
+# Datos para Colombia:
+# * PBI real: 271 300 millones de $
+# * Cantidad de población: 50.88 millones de habitantes
+
+PBI_Colombia = float(input("Ingrese el valor de PBI real de Colombia (millones de $):"))
+Cantidad_Poblacion_Colombia = float(input("Ingrese el valor de cantidad de población de Colombia (millones de habitantes):"))
+
+PBIpercápita_Colombia = PBI_Colombia/Cantidad_Poblacion_Colombia
+
+# Datos para Perú:
+# * PBI real: 202 000 millones de $
+# * Cantidad de población: 32.97 millones de habitantes
+
+PBI_Perú = float(input("Ingrese el valor de PBI real de Perú (millones de $):"))
+Cantidad_Poblacion_Perú = float(input("Ingrese el valor de cantidad de población de Perú (millones de habitantes):"))
+
+PBIpercápita_Perú = PBI_Perú/Cantidad_Poblacion_Perú
+
+# Datos para Chile:
+# * PBI real: 252 900 millones de $
+# * Cantidad de población: 19.12 millones de habitantes
+
+PBI_Chile = float(input("Ingrese el valor de PBI real de Chile (millones de $):"))
+Cantidad_Poblacion_Chile = float(input("Ingrese el valor de cantidad de población de Chile (millones de habitantes):"))
+
+PBIpercápita_Chile = PBI_Chile/Cantidad_Poblacion_Chile
+
+### Construyendo la tabla
+
+from tabulate import tabulate
+
+# Datos organizados en una lista de listas
+datos = [
+    ["Ecuador", PBI_Ecuador, Cantidad_Poblacion_Ecuador, PBIpercápita_Ecuador],
+    ["Brasil", PBI_Brasil, Cantidad_Poblacion_Brasil, PBIpercápita_Brasil],
+    ["Colombia", PBI_Colombia, Cantidad_Poblacion_Colombia, PBIpercápita_Colombia],
+    ["Perú", PBI_Perú, Cantidad_Poblacion_Perú, PBIpercápita_Perú],
+    ["Chile", PBI_Chile, Cantidad_Poblacion_Chile, PBIpercápita_Chile]
+]
+
+# Cabeceras de la tabla
+cabeceras = ["País", "PBI Real (Millones de $)", "Población (Millones de Habitantes)", "PBI per cápita $"]
+
+# Imprimir la tabla con formato 'grid' (rejilla)
+print(tabulate(datos, headers=cabeceras, tablefmt="grid"))
+
+
+# 2) Calcular el PBI per-cápita y determinar cuál economía se encuentra en una mejor situación de consumo, ingreso, gasto. 
+
+# Datos para Perú:
+# * PBI real: 565 400 millones de $
+# * Cantidad de población: 30.80 millones de habitantes
+
+PBI_Perú = float(input("Ingrese el valor de PBI real de Perú (millones de $):"))
+Cantidad_Poblacion_Perú = float(input("Ingrese el valor de cantidad de población de Perú (millones de habitantes):"))
+
+PBIpercápita_Perú = PBI_Perú/Cantidad_Poblacion_Perú
+
+# Datos para Colombia:
+# * PBI real: 620 300 millones de $
+# * Cantidad de población: 34.25 millones de habitantes
+
+PBI_Colombia = float(input("Ingrese el valor de PBI real de Colombia (millones de $):"))
+Cantidad_Poblacion_Colombia = float(input("Ingrese el valor de cantidad de población de Colombia (millones de habitantes):"))
+
+PBIpercápita_Colombia = PBI_Colombia/Cantidad_Poblacion_Colombia
+
+# Datos para Brasil:
+# * PBI real: 1 430 500 millones de $
+# * Cantidad de población: 120.40 millones de habitantes
+
+PBI_Brasil = float(input("Ingrese el valor de PBI real de Brasil (millones de $):"))
+Cantidad_Poblacion_Brasil = float(input("Ingrese el valor de cantidad de población de Brasil (millones de habitantes):"))
+
+PBIpercápita_Brasil = PBI_Brasil/Cantidad_Poblacion_Brasil
+
+### Construyendo la tabla
+
+from tabulate import tabulate
+
+# Datos organizados en una lista de listas
+datos = [
+    ["Perú", PBI_Perú, Cantidad_Poblacion_Perú, PBIpercápita_Perú],
+    ["Colombia", PBI_Colombia, Cantidad_Poblacion_Colombia, PBIpercápita_Colombia],
+    ["Brasil", PBI_Brasil, Cantidad_Poblacion_Brasil, PBIpercápita_Brasil]
+]
+
+# Cabeceras de la tabla
+cabeceras = ["País", "PBI Real (Millones de $)", "Población (Millones de Habitantes)", "PBI per cápita $"]
+
+# Imprimir la tabla con formato 'grid' (rejilla)
+print(tabulate(datos, headers=cabeceras, tablefmt="grid"))
